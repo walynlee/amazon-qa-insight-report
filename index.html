@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aumuca 猫梳 QA 需求洞察报告</title>
+<style>
+  :root {
+    --ink: #1f2430; --sub: #6b7280; --line: #e8e6e1; --bg: #faf9f7;
+    --accent: #d97706; --accent-soft: #fef3e2; --green: #059669; --green-soft: #ecfdf5;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; padding:40px 20px; }
+  .wrap { max-width:860px; margin:0 auto; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:20px; margin-bottom:28px; }
+  h1 { font-size:26px; letter-spacing:0.5px; }
+  .meta { color:var(--sub); font-size:13px; margin-top:8px; }
+  .product-box { background:#fff; border:1px solid var(--line); border-radius:12px; padding:20px 24px; margin-bottom:28px; }
+  .product-box h2 { font-size:17px; margin-bottom:12px; }
+  .kpis { display:flex; flex-wrap:wrap; gap:12px; }
+  .kpi { flex:1; min-width:110px; background:var(--accent-soft); border-radius:10px; padding:12px 14px; }
+  .kpi .num { font-size:22px; font-weight:700; color:var(--accent); }
+  .kpi .lbl { font-size:12px; color:var(--sub); }
+  h2.section { font-size:19px; margin:32px 0 14px; }
+  .qa-card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px 24px; margin-bottom:18px; }
+  .qa-head { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+  .qa-num { background:var(--ink); color:#fff; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+  .qa-head h3 { font-size:16px; flex:1; }
+  .tag { background:var(--green-soft); color:var(--green); font-size:12px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
+  .label { font-size:12px; color:var(--sub); margin:6px 0 4px; }
+  .answer { font-size:14px; margin-bottom:10px; }
+  blockquote { border-left:3px solid var(--accent); background:var(--accent-soft); padding:10px 14px; margin:10px 0; font-size:13px; color:#7c5a1e; border-radius:0 8px 8px 0; }
+  .insight-table { width:100%; border-collapse:collapse; margin:12px 0; font-size:13px; }
+  .insight-table th { background:var(--ink); color:#fff; text-align:left; padding:8px 12px; }
+  .insight-table td { border:1px solid var(--line); padding:8px 12px; }
+  .action { font-size:13px; background:var(--green-soft); border-radius:8px; padding:10px 14px; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { background:#fff; border:1px solid var(--line); border-radius:20px; padding:6px 14px; font-size:13px; }
+  footer { margin-top:36px; border-top:1px solid var(--line); padding-top:14px; font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>买家在问什么，就是需求在哪</h1>
+    <p class="meta">Aumuca 猫梳 QA 需求洞察 · 抓取时间 2026-08-13 · 数据源：商品页 Alexa 问答组件 + 卖家精灵</p>
+  </header>
+
+  <div class="product-box">
+    <h2>Aumuca Cat Brush for Shedding, Cat Brushes for Indoor Cats</h2>
+    <div class="kpis">
+      <div class="kpi"><div class="num">22</div><div class="lbl">QA 总数</div></div>
+      <div class="kpi"><div class="num">4.4★</div><div class="lbl">37,780 评价</div></div>
+      <div class="kpi"><div class="num">$14.99</div><div class="lbl">售价</div></div>
+      <div class="kpi"><div class="num">#333</div><div class="lbl">宠物用品 BSR</div></div>
+      <div class="kpi"><div class="num">#1</div><div class="lbl">Cat Shedding Tools（类目第1）</div></div>
+    </div>
+  </div>
+
+  <h2 class="section">已抓取问答与需求洞察</h2>
+  
+    <div class="qa-card">
+      <div class="qa-head"><span class="qa-num">1</span><h3>Can it be used on rabbits?（能用在兔子身上吗？）</h3><span class="tag">适用性</span></div>
+      <div class="qa-body">
+        <p class="label">AI 回答要点</p>
+        <p class="answer">可以。有买家反馈：「我们用在自家猫和荷兰侏儒兔身上，很喜欢，毛发会困在刷子里，按按钮才释放。」注意：兔子皮肤敏感，建议轻压、短时间试用，先观察反应，拿不准可咨询兽医。</p>
+        <blockquote>买家原话：We use it on our domestic house cats and our Holland Lop bunny. We love this brush because it traps the hair until you push the button to release it.</blockquote>
+        <table class="insight-table">
+          <tr><th>表面问题</th><th>深层需求</th><th>本质差异（痛点）</th></tr>
+          <tr><td>能用在兔子身上吗</td><td>多宠物家庭想一刷多用（猫+兔）</td><td>适用性顾虑，怕伤小动物</td></tr>
+        </table>
+        <p class="action"><strong>卖家动作建议：</strong>主图/五点加「猫狗兔通用」卖点；A+ 放多宠物使用场景图</p>
+      </div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-head"><span class="qa-num">2</span><h3>Does it work on short-haired cats?（对短毛猫有效吗？）</h3><span class="tag">效果预期</span></div>
+      <div class="qa-body">
+        <p class="label">AI 回答要点</p>
+        <p class="answer">有效但效果分情况。短毛到中毛猫反应好，尤其换毛期掉毛多的短毛猫；俄罗斯蓝猫、德文卷毛猫这类毛稀的短毛猫去毛效果不明显。买家建议：短毛要更轻柔地刷，每周 2-3 次。</p>
+        <blockquote>买家原话：You can use the brush on a short haired cat if you do it more gently than you would on other cats.</blockquote>
+        <table class="insight-table">
+          <tr><th>表面问题</th><th>深层需求</th><th>本质差异（痛点）</th></tr>
+          <tr><td>对短毛猫有效吗</td><td>短毛猫掉毛困扰，想控制换毛期浮毛</td><td>效果预期管理</td></tr>
+        </table>
+        <p class="action"><strong>卖家动作建议：</strong>五点写清适用毛长类型；主图对比图（长毛 vs 短毛效果）管理预期</p>
+      </div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-head"><span class="qa-num">3</span><h3>Is it easy to hold?（好握吗？）</h3><span class="tag">便利性</span></div>
+      <div class="qa-body">
+        <p class="label">AI 回答要点</p>
+        <p class="answer">好握。人体工学手柄 + 仅 5.6 盎司轻量 + 配重均衡，买家说长时间刷不累手，有位买家 15 分钟内刷完三只猫。</p>
+        <blockquote>买家原话：One customer notes being able to brush all three of their cats in under 15 minutes.</blockquote>
+        <table class="insight-table">
+          <tr><th>表面问题</th><th>深层需求</th><th>本质差异（痛点）</th></tr>
+          <tr><td>好握吗</td><td>长时间使用不想手累</td><td>人体工学与舒适度</td></tr>
+        </table>
+        <p class="action"><strong>卖家动作建议：</strong>强调人体工学手柄 + 轻量；买家「15分钟刷三只猫」可作信任背书</p>
+      </div>
+    </div>
+
+  <h2 class="section">其余买家高频问题（QA 方向）</h2>
+  <div class="chips"><span class="chip">Does it help with matted fur?（对打结的毛有效吗）</span><span class="chip">Is this brush self-cleaning?（是自清洁的吗）</span><span class="chip">Is it suitable for my cat?（适合我的猫吗）</span><span class="chip">Is it suitable for my dog?（适合我的狗吗）</span><span class="chip">Will this hurt my pet&#x27;s skin?（会伤宠物皮肤吗）</span><span class="chip">How to return the item?（怎么退货）</span></div>
+
+  <footer>报告由 amazon-qa-extraction skill 生成 · 署名 Wynona · 方法论：表面问题 → 深层需求 → 本质差异</footer>
+</div>
+</body>
+</html>
